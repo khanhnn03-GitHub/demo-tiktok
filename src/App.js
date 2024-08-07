@@ -3,6 +3,7 @@ import {publicRoutes } from '~/routes'
 import {DefaultLayout} from "~/components/Layout";
 import {Fragment} from "react";
 import React from 'react';
+
 function App() {
     return (
         <Router>
