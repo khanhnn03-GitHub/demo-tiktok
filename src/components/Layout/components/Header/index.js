@@ -1,6 +1,4 @@
-// noinspection JSValidateTypes
-
-import classNames from "classnames/bind";
+import classNames from "classnames/bind"
 import styles from "./Header.module.scss";
 import React, {useEffect} from 'react';
 import imges from "../../../../assets/images";
@@ -9,11 +7,12 @@ import {faCircleXmark, faMagnifyingGlass, faSpinner} from "@fortawesome/free-sol
 import Tippy from "@tippyjs/react/headless";
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from "../../../AccountItem";
+import Button from "~/components/Button";
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
-    // eslint-disable-next-line no-unused-vars
+
     const [searchResult, setSearchResults] = React.useState([]);
 
     useEffect(() => {
@@ -57,7 +56,10 @@ const Header = () => {
                     </div>
                 </Tippy>
 
-                <div className={cx("actions")}></div>
+                <div className={cx("actions")}>
+                    <Button text>Upload</Button>
+                    <Button primary>Log in</Button>
+                </div>
             </div>
         </header>
         </>)
