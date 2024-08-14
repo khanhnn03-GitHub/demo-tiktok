@@ -14,10 +14,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react";
 import 'tippy.js/dist/tippy.css';
-import Button from "~/components/Button";
 import Menu from "../../../Popper/Menu";
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Search from "../../../Search";
+import Button from "~/components/Button";
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -120,6 +120,7 @@ const Header = () => {
                         <>
                             <Button text>Upload</Button>
                             <Button primary>Log in</Button>
+                            {/*className button*/}
                         </>
                     )}
 
