@@ -1,7 +1,7 @@
 import classNames from "classnames/bind"
 import styles from "./Header.module.scss";
 import React from 'react';
-import imges from "../../../../assets/images";
+
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faCircleQuestion,
@@ -18,6 +18,9 @@ import Menu from "../../../Popper/Menu";
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Search from "../../../Search";
 import Button from "~/components/Button";
+import { Link } from 'react-router-dom';
+import routesConfig from '~/config/routes';
+import images from "../../../../assets/images";
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -90,7 +93,9 @@ const Header = () => {
     return (<>
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={imges.logo} alt="Tiktok"/>
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
                 <Search />
 
