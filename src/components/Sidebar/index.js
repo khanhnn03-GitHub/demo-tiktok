@@ -12,6 +12,7 @@ import {
 import config from '~/config';
 import React from 'react';
 import Menu, {MenuItem} from "../Search/Menu";
+import SuggestedAccounts from "../SuggesetedAccounts";
 
 
 const cx = classNames.bind(styles);
@@ -29,6 +30,9 @@ const Sidebar = () => {
                 />
                 <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon/>} activeIcon={<LiveActiveIcon/>}/>
             </Menu>
+            <SuggestedAccounts label="Suggested accounts" />
+            <SuggestedAccounts label="Following accounts" />
+
         </aside>
     )
 }
